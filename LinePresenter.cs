@@ -1,4 +1,6 @@
-﻿public class LinePresenter
+using System;
+
+public class LinePresenter
 {
   private readonly ILineView _view;
   private readonly LineModel _model;
@@ -30,6 +32,8 @@
       _model.PointO2 = new PointD(pointO2X, ordinateO2);
 
       _view.Result = $"Ордината точки O2: y = {ordinateO2:F2}";
+
+      _view.ClearInputFields();
     }
     catch (FormatException)
     {
