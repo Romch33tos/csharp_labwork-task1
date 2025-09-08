@@ -1,4 +1,4 @@
-﻿partial class LineForm
+partial class LineForm
 {
   private System.ComponentModel.IContainer components = null;
 
@@ -57,8 +57,10 @@
     textBoxA.Name = "textBoxA";
     textBoxA.PlaceholderText = "а";
     textBoxA.Size = new Size(70, 26);
-    textBoxA.TabIndex = 6;
+    textBoxA.TabIndex = 0;
     textBoxA.TextAlign = HorizontalAlignment.Center;
+    textBoxA.KeyDown += TextBox_KeyDown;
+    textBoxA.KeyPress += TextBox_KeyPress;
     // 
     // textBoxO1Y
     // 
@@ -69,8 +71,10 @@
     textBoxO1Y.Name = "textBoxO1Y";
     textBoxO1Y.PlaceholderText = "y1";
     textBoxO1Y.Size = new Size(32, 26);
-    textBoxO1Y.TabIndex = 5;
+    textBoxO1Y.TabIndex = 2;
     textBoxO1Y.TextAlign = HorizontalAlignment.Center;
+    textBoxO1Y.KeyDown += TextBox_KeyDown;
+    textBoxO1Y.KeyPress += TextBox_KeyPress;
     // 
     // textBoxO1X
     // 
@@ -81,17 +85,19 @@
     textBoxO1X.Name = "textBoxO1X";
     textBoxO1X.PlaceholderText = "х1";
     textBoxO1X.Size = new Size(32, 26);
-    textBoxO1X.TabIndex = 4;
+    textBoxO1X.TabIndex = 1;
     textBoxO1X.TextAlign = HorizontalAlignment.Center;
+    textBoxO1X.KeyDown += TextBox_KeyDown;
+    textBoxO1X.KeyPress += TextBox_KeyPress;
     // 
     // calculateButton
     // 
     calculateButton.BackColor = Color.Transparent;
-    calculateButton.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+    calculateButton.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
     calculateButton.Location = new Point(145, 209);
     calculateButton.Name = "calculateButton";
     calculateButton.Size = new Size(160, 30);
-    calculateButton.TabIndex = 3;
+    calculateButton.TabIndex = 4;
     calculateButton.Text = "Рассчитать";
     calculateButton.UseVisualStyleBackColor = false;
     calculateButton.Click += CalculateButton_Click;
@@ -117,14 +123,16 @@
     textBoxO2X.Name = "textBoxO2X";
     textBoxO2X.PlaceholderText = "x2";
     textBoxO2X.Size = new Size(70, 26);
-    textBoxO2X.TabIndex = 1;
+    textBoxO2X.TabIndex = 3;
     textBoxO2X.TextAlign = HorizontalAlignment.Center;
+    textBoxO2X.KeyDown += TextBox_KeyDown;
+    textBoxO2X.KeyPress += TextBox_KeyPress;
     // 
     // labelResult
     // 
     labelResult.BackColor = Color.White;
     labelResult.BorderStyle = BorderStyle.FixedSingle;
-    labelResult.Font = new Font("Arial", 10F, FontStyle.Bold);
+    labelResult.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
     labelResult.ForeColor = Color.Black;
     labelResult.Location = new Point(20, 9);
     labelResult.Name = "labelResult";
